@@ -3,7 +3,7 @@
 #if !defined(__FIBBASE_H__)
 #define __FIBBASE_H__
 
-struct FibBase {
+typedef struct FibBase {
     unsigned int wident   : 16;
     unsigned int nFib     : 16;
     unsigned int          : 16;
@@ -35,6 +35,6 @@ struct FibBase {
     unsigned int reserved4: 16;
     unsigned int reserved5: 32;
     unsigned int reserved6: 32;
-};
+} FibBase;
 
 #endif

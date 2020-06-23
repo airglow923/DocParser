@@ -67,7 +67,7 @@ struct FibRgCswNew {
 };
 
 struct Fib {
-    unsigned int base     : 256;
+    FibBase base;
     unsigned int FibVar1  : 256;
     unsigned int FibVar2  : 256;
     unsigned int csw      :  16;
