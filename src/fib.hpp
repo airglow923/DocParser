@@ -67,7 +67,7 @@ struct FibRgW97 {
     unsigned int reserved12: 16;
     unsigned int reserved13: 16;
     unsigned int lidFE     : 16;
-}
+};
 
 struct FibRgLw97 {
     unsigned int cbMac     : 32;
@@ -92,22 +92,7 @@ struct FibRgLw97 {
     unsigned int reserved12: 32;
     unsigned int reserved13: 32;
     unsigned int reserved14: 32;
-}
-
-typedef struct FibRgFcLcb97 {
-} FibRgFcLcb97;
-
-typedef struct FibRgFcLcb2000 {
-} FibRgFcLcb2000;
-
-typedef struct FibRgFcLcb2002 {
-} FibRgFcLcb2002;
-
-typedef struct FibRgFcLcb2003 {
-} FibRgFcLcb2003;
-
-typedef struct FibRgFcLcb92007 {
-} FibRgFcLcb2007;
+};
 
 #if nFib == 0x00C1
     #define FibRgFcLcb FibRgFcLcb97
