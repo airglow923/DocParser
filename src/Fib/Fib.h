@@ -1,9 +1,10 @@
 #pragma once
 
-#if !defined(__FIB_HPP__)
-#define __FIB_HPP__
+#if !defined(__FIB_H__)
+#define __FIB_H__
 
-#include <cstdint>
+#include "FibBase.h"
+#include "FibRgFcLcb/FibRgFcLcb.h"
 
 /*
  * The Fib structure contains information about the document and specifies the
@@ -17,40 +18,6 @@
  * Fib: https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-doc/9aeaa2e7-4a45-468e-ab13-3f6193eb9394
  * FibBase: https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-doc/26fb6c06-4e5c-4778-ab4e-edbf26a545bb
  */
-
-struct FibBase {
-    unsigned int wident   : 16;
-    unsigned int nFib     : 16;
-    unsigned int          : 16;
-    unsigned int lid      : 16;
-    unsigned int pnNext   : 16;
-    unsigned int A        :  1;
-    unsigned int B        :  1;
-    unsigned int C        :  1;
-    unsigned int D        :  1;
-    unsigned int E        :  4;
-    unsigned int F        :  1;
-    unsigned int G        :  1;
-    unsigned int H        :  1;
-    unsigned int I        :  1;
-    unsigned int J        :  1;
-    unsigned int K        :  1;
-    unsigned int L        :  1;
-    unsigned int M        :  1;
-    unsigned int nFibBack : 16;
-    unsigned int lKey     : 32;
-    unsigned int envr     :  8;
-    unsigned int N        :  1;
-    unsigned int O        :  1;
-    unsigned int P        :  1;
-    unsigned int Q        :  1;
-    unsigned int R        :  1;
-    unsigned int S        :  3;
-    unsigned int reserved3: 16;
-    unsigned int reserved4: 16;
-    unsigned int reserved5: 32;
-    unsigned int reserved6: 32;
-};
 
 struct FibRgW97 {
     unsigned int reserved1 : 16;
@@ -93,28 +60,6 @@ struct FibRgLw97 {
     unsigned int reserved13: 32;
     unsigned int reserved14: 32;
 };
-
-#if nFib == 0x00C1
-    #define FibRgFcLcb FibRgFcLcb97
-#elif nFib == 0x00D9
-    #define FibRgFcLcb FibRgFcLcb2000
-#elif nFib == 0x0101
-    #define FibRgFcLcb FibRgFcLcb2002
-#elif nFib == 0x010C
-    #define FibRgFcLcb FibRgFcLcb2003
-#elif nFib == 0x0112
-    #define FibRgFcLcb FibRgFcLcb2007
-#endif
-
-#if nFibNew == 0x00D9
-    #define FibRgCswNewData2000
-#elif nFibNew == 0x0101
-    #define FibRgCswNewData2000
-#elif nFibNew == 0x010C
-    #define FibRgCswNewData2000
-#elif nFibNew == 0x0112
-    #define FibRgCswNewData2000
-#endif
 
 struct FibRgCswNew {
     unsigned int nFibNew:      16;
