@@ -12,15 +12,15 @@
 #ifdef NFIB
 
 #if NFIB == 0x00C1
-    #define FibRgFcLcb FibRgFcLcb97
+    typedef FibRgFcLcb97 FibRgFcLcb
 #elif NFIB == 0x00D9
-    #define FibRgFcLcb FibRgFcLcb2000
+    typedef FibRgFcLcb2000 FibRgFcLcb
 #elif NFIB == 0x0101
-    #define FibRgFcLcb FibRgFcLcb2002
+    typedef FibRgFcLcb2002 FibRgFcLcb
 #elif NFIB == 0x010C
-    #define FibRgFcLcb FibRgFcLcb2003
+    typedef FibRgFcLcb2003 FibRgFcLcb
 #elif NFIB == 0x0112
-    #define FibRgFcLcb FibRgFcLcb2007
+    typedef FibRgFcLcb2007 FibRgFcLcb
 #endif
 
 #endif
