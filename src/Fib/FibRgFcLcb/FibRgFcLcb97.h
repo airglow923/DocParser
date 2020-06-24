@@ -3,7 +3,7 @@
 #ifndef __FIBRGFCLCB97_H__
 #define __FIBRGFCLCB97_H__
 
-typedef struct FibRgFcLcb97 {
+typedef struct {
     unsigned int fcStshfOrig: 32;
     unsigned int lcbStshfOrig: 32;
     unsigned int fcStshf: 32;

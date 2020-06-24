@@ -5,7 +5,7 @@
 
 #include "FibRgFcLcb2002.h"
 
-typedef struct FibRgFcLcb2003 {
+typedef struct {
     FibRgFcLcb2002 rgFcLcb2002;
     unsigned int fcHplxsdr: 32;
     unsigned int lcbHplxsdr: 32;
