@@ -1,6 +1,6 @@
 #pragma once
 
-#if !defined(__FIBRGFCLCB97_H__)
+#ifndef __FIBRGFCLCB97_H__
 #define __FIBRGFCLCB97_H__
 
 typedef struct FibRgFcLcb97 {

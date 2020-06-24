@@ -1,6 +1,6 @@
 #pragma once
 
-#if !defined(__FIB_H__)
+#ifndef __FIB_H__
 #define __FIB_H__
 
 #include "FibBase.h"

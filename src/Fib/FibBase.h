@@ -1,6 +1,6 @@
 #pragma once
 
-#if !defined(__FIBBASE_H__)
+#ifndef __FIBBASE_H__
 #define __FIBBASE_H__
 
 typedef struct FibBase {

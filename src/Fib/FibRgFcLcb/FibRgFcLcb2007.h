@@ -1,6 +1,6 @@
 #pragma once
 
-#if !defined(__FIBRGFCLCB2007_H__)
+#ifndef __FIBRGFCLCB2007_H__
 #define __FIBRGFCLCB2007_H__
 
 #include "FibRgFcLcb2003.h"
