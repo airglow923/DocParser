@@ -9,7 +9,7 @@
 #include "FibRgFcLcb2003.h"
 #include "FibRgFcLcb2007.h"
 
-#if defined(NFIB)
+#ifdef NFIB
     #if NFIB == 0x00C1
         #define FibRgFcLcb FibRgFcLcb97
     #elif NFIB == 0x00D9
