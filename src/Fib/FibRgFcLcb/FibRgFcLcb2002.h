@@ -5,6 +5,8 @@
 
 #include "FibRgFcLcb2000.h"
 
+#define SZ_FIBRGFCLCB2002 1088
+
 typedef struct {
     FibRgFcLcb2000 rgFcLcb2000;
     unsigned int fcUnused1: 32;
