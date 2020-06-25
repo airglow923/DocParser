@@ -3,6 +3,8 @@
 #ifndef __FIBBASE_H__
 #define __FIBBASE_H__
 
+#define SZ_FIBBASE 32
+
 typedef struct {
     unsigned int wident   : 16;
     unsigned int nFib     : 16;

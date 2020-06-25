@@ -63,7 +63,7 @@ typedef struct {
 } FibRgLw97;
 
 typedef struct {
-    FibBase base;
+    unsigned int base: SZ_FIBBASE * 8;
     unsigned int csw      :  16;
     unsigned int fibRgW   : 224;
     unsigned int cslw     :  16;
