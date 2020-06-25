@@ -6,8 +6,8 @@
 #include "FibRgCswNewData.h"
 
 typedef struct {
-    unsigned int nFibNew:      16;
-    FibRgCswNewData rgCswNewData; 
+    unsigned int nFibNew: 16;
+    FibRgCswNewData rgCswNewData;
 } FibRgCswNew;
 
 #endif
