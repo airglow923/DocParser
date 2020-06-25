@@ -68,25 +68,14 @@ typedef struct {
 
 typedef struct {
     FibBase base;
-    unsigned int FibVar1  : 256;
-    unsigned int FibVar2  : 256;
     unsigned int csw      :  16;
     unsigned int fibRgW   : 224;
-    unsigned int FibVar3  : 256;
-    unsigned int FibVar4  : 256;
-    unsigned int FibVar5  : 128;
     unsigned int cslw     :  16;
-    unsigned int FibVar6  : 256;
-    unsigned int FibVar7  : 256;
     unsigned int fibRgLw  : 704;
-    unsigned int FibVar8  : 256;
-    unsigned int FibVar9  : 256;
     unsigned int cbRgFcLcb:  16;
     FibRgFcLcb fibRgFcLcbBlob;
-    unsigned int FibVar10 : 256;
     unsigned int cswNew   :  16;
-    struct FibRgCswNew fibRgCswNew;
-    unsigned int FibVar11 : 256;
+    FibRgCswNew fibRgCswNew;
 } Fib;
 
 #endif
