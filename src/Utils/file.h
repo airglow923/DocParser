@@ -19,6 +19,7 @@ LONGLONG get_file_size(const WINCHAR *filename);
 
 #elif defined(__unix__) || defined(__linux__)
 
+#include <sys/types.h>
 #include <sys/stat.h>
 
 off_t get_file_size(const char *filename);
