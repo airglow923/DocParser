@@ -5,6 +5,7 @@
 
 #include "FibBase.h"
 #include "FibRgFcLcb/FibRgFcLcb.h"
+#include "FibRgCswNew/FibRgCswNew.h"
 
 /*
  * The Fib structure contains information about the document and specifies the
@@ -60,11 +61,6 @@ typedef struct {
     unsigned int reserved13: 32;
     unsigned int reserved14: 32;
 } FibRgLw97;
-
-typedef struct {
-    unsigned int nFibNew:      16;
-    unsigned int rgCswNewData: 16; 
-} FibRgCswNew;
 
 typedef struct {
     FibBase base;
