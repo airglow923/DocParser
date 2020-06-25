@@ -3,10 +3,10 @@
 #ifndef __FIBBASE_H__
 #define __FIBBASE_H__
 
-typedef struct FibBase {
+typedef struct {
     unsigned int wident   : 16;
     unsigned int nFib     : 16;
-    unsigned int          : 16;
+    unsigned int unused   : 16;
     unsigned int lid      : 16;
     unsigned int pnNext   : 16;
     unsigned int A        :  1;

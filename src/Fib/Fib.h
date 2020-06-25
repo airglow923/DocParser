@@ -19,7 +19,7 @@
  * FibBase: https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-doc/26fb6c06-4e5c-4778-ab4e-edbf26a545bb
  */
 
-struct FibRgW97 {
+typedef struct {
     unsigned int reserved1 : 16;
     unsigned int reserved2 : 16;
     unsigned int reserved3 : 16;
@@ -34,9 +34,9 @@ struct FibRgW97 {
     unsigned int reserved12: 16;
     unsigned int reserved13: 16;
     unsigned int lidFE     : 16;
-};
+} FibRgW97;
 
-struct FibRgLw97 {
+typedef struct {
     unsigned int cbMac     : 32;
     unsigned int reserved1 : 32;
     unsigned int reserved2 : 32;
@@ -59,14 +59,14 @@ struct FibRgLw97 {
     unsigned int reserved12: 32;
     unsigned int reserved13: 32;
     unsigned int reserved14: 32;
-};
+} FibRgLw97;
 
-struct FibRgCswNew {
+typedef struct {
     unsigned int nFibNew:      16;
     unsigned int rgCswNewData: 16; 
-};
+} FibRgCswNew;
 
-struct Fib {
+typedef struct {
     FibBase base;
     unsigned int FibVar1  : 256;
     unsigned int FibVar2  : 256;
@@ -87,6 +87,6 @@ struct Fib {
     unsigned int cswNew   :  16;
     struct FibRgCswNew fibRgCswNew;
     unsigned int FibVar11 : 256;
-};
+} Fib;
 
 #endif
