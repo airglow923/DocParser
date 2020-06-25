@@ -4,6 +4,8 @@
 #define __FIB_H__
 
 #include "FibBase.h"
+#include "FibRgW97.h"
+#include "FibRgLw97.h"
 #include "FibRgFcLcb/FibRgFcLcb.h"
 #include "FibRgCswNew/FibRgCswNew.h"
 
@@ -21,53 +23,11 @@
  */
 
 typedef struct {
-    unsigned int reserved1: 16;
-    unsigned int reserved2: 16;
-    unsigned int reserved3: 16;
-    unsigned int reserved4: 16;
-    unsigned int reserved5: 16;
-    unsigned int reserved6: 16;
-    unsigned int reserved7: 16;
-    unsigned int reserved8: 16;
-    unsigned int reserved9: 16;
-    unsigned int reserved10: 16;
-    unsigned int reserved11: 16;
-    unsigned int reserved12: 16;
-    unsigned int reserved13: 16;
-    unsigned int lidFE: 16;
-} FibRgW97;
-
-typedef struct {
-    unsigned int cbMac: 32;
-    unsigned int reserved1: 32;
-    unsigned int reserved2: 32;
-    unsigned int ccpText: 32;
-    unsigned int ccpFtn: 32;
-    unsigned int ccpHdd: 32;
-    unsigned int reserved3: 32;
-    unsigned int ccpAtn: 32;
-    unsigned int ccpEdn: 32;
-    unsigned int ccpTxbx: 32;
-    unsigned int ccpHdrTxbx: 32;
-    unsigned int reserved4: 32;
-    unsigned int reserved5: 32;
-    unsigned int reserved6: 32;
-    unsigned int reserved7: 32;
-    unsigned int reserved8: 32;
-    unsigned int reserved9: 32;
-    unsigned int reserved10: 32;
-    unsigned int reserved11: 32;
-    unsigned int reserved12: 32;
-    unsigned int reserved13: 32;
-    unsigned int reserved14: 32;
-} FibRgLw97;
-
-typedef struct {
     unsigned int base: SZ_FIBBASE * 8;
     unsigned int csw:  16;
-    unsigned int fibRgW: 224;
+    unsigned int fibRgW: SZ_FIBRGW97 * 8;
     unsigned int cslw:  16;
-    unsigned int fibRgLw: 704;
+    unsigned int fibRgLw: SZ_FIBRGLW97 * 8;
     unsigned int cbRgFcLcb:  16;
     FibRgFcLcb fibRgFcLcbBlob;
     unsigned int cswNew:  16;
