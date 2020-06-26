@@ -3,8 +3,10 @@
 #ifndef __PRL_H__
 #define __PRL_H__
 
+#include "Sprm.h"
+
 typedef struct {
-    unsigned int Sprm: 16;
-};
+    unsigned int sprm: 16;
+} Prl;
 
 #endif

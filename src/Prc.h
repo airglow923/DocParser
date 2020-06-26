@@ -5,7 +5,6 @@
 
 typedef struct {
     unsigned int clxt: 8;
-
 } Prc;
 
 #endif
