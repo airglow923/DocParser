@@ -16,7 +16,13 @@ typedef struct {
     unsigned int cslw: 16;
     unsigned int fibRgLw: SZ_FIBRGLW97 * 8;
     unsigned int cbRgFcLcb: 16;
-    FibRgFcLcb fibRgFcLcbBlob;
+    union {
+        FibRgFcLcb97    frfl97;
+        FibRgFcLcb2000  frfl2000;
+        FibRgFcLcb2002  frfl2002;
+        FibRgFcLcb2003  frfl2003;
+        FibRgFcLcb2007  frfl2007;
+    } fibRgFcLcbBlob;
     unsigned int cswNew: 16;
     FibRgCswNew fibRgCswNew;
 } Fib;

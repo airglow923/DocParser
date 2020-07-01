@@ -7,7 +7,10 @@
 
 typedef struct {
     unsigned int nFibNew: 16;
-    FibRgCswNewData rgCswNewData;
+    union {
+        FibRgCswNewData2000 frcnd2000;
+        FibRgCswNewData2007 frcnd2007;
+    } rgCswNewData;
 } FibRgCswNew;
 
 #endif
