@@ -7,7 +7,7 @@ int is_big_endian(void)
     return *ch == 0x12;
 }
 
-int is_big_endian(void)
+int is_small_endian(void)
 {
     int i = 0x1234;
     char *ch = (char *) &i;
