@@ -5,7 +5,7 @@
 
 #include "FibRgCswNewData.h"
 
-typedef struct {
+typedef struct FibRgCswNew {
     unsigned int nFibNew: 16;
     union {
         FibRgCswNewData2000 frcnd2000;

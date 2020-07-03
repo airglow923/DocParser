@@ -5,7 +5,7 @@
 
 #define SZ_FIBBASE 32
 
-typedef struct {
+typedef struct FibBase {
     unsigned int wident   : 16;
     unsigned int nFib     : 16;
     unsigned int unused   : 16;

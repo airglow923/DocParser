@@ -9,7 +9,7 @@
 #include "FibRgFcLcb/FibRgFcLcb.h"
 #include "FibRgCswNew/FibRgCswNew.h"
 
-typedef struct {
+typedef struct Fib {
     unsigned int base: SZ_FIBBASE * 8;
     unsigned int csw: 16;
     unsigned int fibRgW: SZ_FIBRGW97 * 8;

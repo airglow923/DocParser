@@ -5,7 +5,7 @@
 
 #define SZ_FIBRGLW97 88
 
-typedef struct {
+typedef struct FibRgLw97 {
     unsigned int cbMac: 32;
     unsigned int reserved1: 32;
     unsigned int reserved2: 32;

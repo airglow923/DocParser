@@ -3,7 +3,7 @@
 #ifndef __PRCDATA_H__
 #define __PRCDATA_H__
 
-typedef struct {
+typedef struct PrcData {
     signed int cbGrpprl: 16;
     
 } PrcData;

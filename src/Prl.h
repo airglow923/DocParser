@@ -5,7 +5,7 @@
 
 #include "Sprm.h"
 
-typedef struct {
+typedef struct Prl {
     unsigned int sprm: 16;
 } Prl;
 

@@ -5,7 +5,7 @@
 
 #define SZ_FIBRGCSWNEWDATA2000 2
 
-typedef struct {
+typedef struct FibRgCswNewData2000 {
     unsigned int cQuickSavesNew: 16;
 } FibRgCswNewData2000;
 

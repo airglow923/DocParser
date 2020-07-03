@@ -3,7 +3,7 @@
 #ifndef __PRC_H__
 #define __PRC_H__
 
-typedef struct {
+typedef struct Prc {
     unsigned int clxt: 8;
 } Prc;
 

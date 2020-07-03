@@ -5,7 +5,7 @@
 
 #define SZ_FIBRGW97 28
 
-typedef struct {
+typedef struct FibRgW97 {
     unsigned int reserved1: 16;
     unsigned int reserved2: 16;
     unsigned int reserved3: 16;

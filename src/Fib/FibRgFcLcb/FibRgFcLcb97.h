@@ -5,7 +5,7 @@
 
 #define SZ_FIBRGFCLCB97 744
 
-typedef struct {
+typedef struct FibRgFcLcb97 {
     unsigned int fcStshfOrig: 32;
     unsigned int lcbStshfOrig: 32;
     unsigned int fcStshf: 32;
