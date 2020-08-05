@@ -4,17 +4,21 @@
 #define __PRL_H__
 
 #include "Sprm.h"
+#include "ToggleOperand.h"
 
 typedef struct Prl {
-    unsigned int sprm: 16;
+    Sprm sprm;
     union {
-        unsigned int toggleOperand: 8;
+        ToggleOperand toggleOperand;
         unsigned int one: 8;
         unsigned int two: 16;
         unsigned int three: 32;
         unsigned int four: 16;
         unsigned int five: 16;
-        unsigned int six: 1;
+        struct {
+            unsigned char first;
+            unsigned int *data;
+        } six;
         unsigned int seven: 24;
     } operand;
 } Prl;
