@@ -8,7 +8,7 @@
 #define SZ_FIBRGCSWNEWDATA2007 8
 
 typedef struct FibRgCswNewData2007 {
-    unsigned int rgCswNewData2000: SZ_FIBRGCSWNEWDATA2000 * 8;
+    FibRgCswNewData2000 rgCswNewData2000;
     unsigned int lidThemeOther: 16;
     unsigned int lidThemeFE: 16;
     unsigned int lidThemeCS: 16;

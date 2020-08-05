@@ -8,7 +8,7 @@
 #define SZ_FIBRGFCLCB2002 1088
 
 typedef struct FibRgFcLcb2002 {
-    unsigned int rgFcLcb2000: SZ_FIBRGFCLCB2000 * 8;
+    FibRgFcLcb2000 rgFcLcb2000;
     unsigned int fcUnused1: 32;
     unsigned int lcbUnused1: 32;
     unsigned int fcPlcfPgp: 32;
