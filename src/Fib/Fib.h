@@ -10,11 +10,11 @@
 #include "FibRgCswNew/FibRgCswNew.h"
 
 typedef struct Fib {
-    unsigned int base: SZ_FIBBASE * 8;
+    FibBase base;
     unsigned int csw: 16;
-    unsigned int fibRgW: SZ_FIBRGW97 * 8;
+    FibRgW97 fibRgW;
     unsigned int cslw: 16;
-    unsigned int fibRgLw: SZ_FIBRGLW97 * 8;
+    FibRgLw97 fibRgLw;
     unsigned int cbRgFcLcb: 16;
     union {
         FibRgFcLcb97    frfl97;
