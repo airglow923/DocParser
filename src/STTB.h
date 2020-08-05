@@ -10,15 +10,17 @@ typedef struct STTB {
         unsigned int fExtendExists: 16;
     } cData;
     unsigned int cbExtra: 16;
-    union {
-        unsigned int fExtendNotExists: 8;
-        unsigned int fExtendExists: 16;
-    } cchData;
-    union {
-        unsigned int fExtendNotExists: 8;
-        unsigned int fExtendExists: 32;
-    } cchData;
-    unsigned int extraData: 16;
+    struct STTB_array {
+        union {
+            unsigned int fExtendNotExists: 8;
+            unsigned int fExtendExists: 16;
+        } cchData;
+        union {
+            unsigned int fExtendNotExists: 8;
+            unsigned int fExtendExists: 32;
+        } data;
+        unsigned char extraData: 16;
+    } *sttb_array;
 } STTB;
 
 #endif
