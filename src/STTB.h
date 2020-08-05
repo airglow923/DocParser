@@ -19,7 +19,7 @@ typedef struct STTB {
             unsigned int fExtendNotExists: 8;
             unsigned int fExtendExists: 32;
         } data;
-        unsigned char extraData: 16;
+        unsigned char *extraData;
     } *sttb_array;
 } STTB;
 
