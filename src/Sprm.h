@@ -5,7 +5,7 @@
 
 typedef struct Sprm {
     unsigned int ispmd: 9;
-    unsigned int A: 1;
+    unsigned int fSpec: 1;
     unsigned int sgc: 3;
     unsigned int spra: 3;
 } Sprm;
