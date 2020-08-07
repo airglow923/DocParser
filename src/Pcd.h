@@ -4,7 +4,7 @@
 #define __PCD_H__
 
 #include "FcCompressed.h"
-#include "Prm/Prm.h"
+#include "Prm.h"
 
 typedef struct Pcd {
     unsigned int fNoParaLast: 1;
