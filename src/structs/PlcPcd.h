@@ -3,7 +3,7 @@
 #ifndef __PLCPCD_H__
 #define __PLCPCD_H__
 
-#include "Pcdt.h"
+#include "Pcd.h"
 
 #include <stdint.h>
 
