@@ -9,6 +9,6 @@ typedef struct Pcdt {
     unsigned int clxt: 8;
     unsigned int lcb: 32;
     PlcPcd *plcPcd;
-};
+} Pcdt;
 
 #endif
