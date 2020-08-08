@@ -5,9 +5,11 @@
 
 #include "PlcPcd.h"
 
+#include <stdint.h>
+
 typedef struct Pcdt {
-    unsigned int clxt: 8;
-    unsigned int lcb: 32;
+    uint8_t clxt;
+    uint32_t lcb;
     PlcPcd *plcPcd;
 } Pcdt;
 

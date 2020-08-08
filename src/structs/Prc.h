@@ -5,8 +5,10 @@
 
 #include "PrcData.h"
 
+#include <stdint.h>
+
 typedef struct Prc {
-    unsigned int clxt: 8;
+    uint8_t clxt;
     PrcData data;
 } Prc;
 

@@ -9,13 +9,15 @@
 #include "FibRgFcLcb/FibRgFcLcb.h"
 #include "FibRgCswNew/FibRgCswNew.h"
 
+#include <stdint.h>
+
 typedef struct Fib {
     FibBase base;
-    unsigned int csw: 16;
+    uint16_t csw;
     FibRgW97 fibRgW;
-    unsigned int cslw: 16;
+    uint16_t cslw;
     FibRgLw97 fibRgLw;
-    unsigned int cbRgFcLcb: 16;
+    uint16_t cbRgFcLcb;
     union {
         FibRgFcLcb97    frfl97;
         FibRgFcLcb2000  frfl2000;
@@ -23,7 +25,7 @@ typedef struct Fib {
         FibRgFcLcb2003  frfl2003;
         FibRgFcLcb2007  frfl2007;
     } fibRgFcLcbBlob;
-    unsigned int cswNew: 16;
+    uint16_t cswNew;
     FibRgCswNew fibRgCswNew;
 } Fib;
 

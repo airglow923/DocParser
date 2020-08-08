@@ -7,10 +7,12 @@
 #include "Prm.h"
 
 typedef struct Pcd {
-    unsigned int fNoParaLast: 1;
-    unsigned int fR1: 1;
-    unsigned int fDirty: 1;
-    unsigned int fR2: 13;
+    struct {
+        unsigned int fNoParaLast: 1;
+        unsigned int fR1: 1;
+        unsigned int fDirty: 1;
+        unsigned int fR2: 13;
+    } PcdFlags;
     FcCompressed fc;
     Prm prm;
 } Pcd;

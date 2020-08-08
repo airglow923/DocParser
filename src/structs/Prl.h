@@ -6,20 +6,24 @@
 #include "Sprm.h"
 #include "ToggleOperand.h"
 
+#include <stdint.h>
+
 typedef struct Prl {
     Sprm sprm;
     union {
         ToggleOperand toggleOperand;
-        unsigned int one: 8;
-        unsigned int two: 16;
-        unsigned int three: 32;
-        unsigned int four: 16;
-        unsigned int five: 16;
+        uint8_t one;
+        uint16_t two;
+        uint32_t three;
+        uint16_t four;
+        uint16_t five;
         struct {
             unsigned char first;
             unsigned int *data;
         } six;
-        unsigned int seven: 24;
+        struct {
+            unsigned int a: 24;
+        } seven;
     } operand;
 } Prl;
 

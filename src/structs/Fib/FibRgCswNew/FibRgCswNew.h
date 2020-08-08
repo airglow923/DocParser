@@ -5,8 +5,10 @@
 
 #include "FibRgCswNewData.h"
 
+#include <stdint.h>
+
 typedef struct FibRgCswNew {
-    unsigned int nFibNew: 16;
+    uint16_t nFibNew;
     union {
         FibRgCswNewData2000 frcnd2000;
         FibRgCswNewData2007 frcnd2007;

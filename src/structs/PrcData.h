@@ -5,8 +5,10 @@
 
 #include "Prl.h"
 
+#include <stdint.h>
+
 typedef struct PrcData {
-    signed int cbGrpprl: 16;
+    int16_t cbGrpprl;
     Prl *GrpPrl;
 } PrcData;
 
