@@ -20,12 +20,12 @@ static void read_FibRgCswNew(
     }
 }
 
-void read_fib(Fib *restrict fib, FILE *restrict fp)
+void read_Fib(Fib *restrict fib, FILE *restrict fp)
 {
     fread(&fib->base, sizeof(FibBase), 1, fp);
-    fread(&fib->csw, 2, 1, fp);
+    fread(&fib->csw, sizeof(fib->csw), 1, fp);
     fread(&fib->fibRgW, sizeof(FibRgW97), 1, fp);
-    fread(&fib->cslw, 2, 1, fp);
+    fread(&fib->cslw, sizeof(fib->cslw), 1, fp);
     fread(&fib->fibRgLw, sizeof(FibRgLw97), 1, fp);
 
     size_t sizeof_FibRgFcLcb;

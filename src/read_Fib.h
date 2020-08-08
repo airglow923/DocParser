@@ -9,6 +9,6 @@
 
 #include <stdlib.h>
 
-void read_fib(void *restrict buffer, FILE *restrict fp);
+void read_Fib(Fib *restrict buffer, FILE *restrict fp);
 
 #endif
