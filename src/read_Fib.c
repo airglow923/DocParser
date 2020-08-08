@@ -1,10 +1,26 @@
 #include "read_Fib.h"
 
-static void read_FibRgCswNew(void *restrict buffer, FILE *restrict fp)
+static void read_FibRgCswNew(
+    FibRgCswNew *restrict fibRgCswNew, FILE *restrict fp)
 {
+    fread(&fibRgCswNew->nFibNew, 2, 1, fp);
+
+    switch (fibRgCswNew.nFibNew) {
+    case 0x00D9:
+    case 0x0101:
+    case 0x010C:
+        fread(&fibRgCswNew->rgCswNewData, sizeof(FibRgCswNewData2000), 1, fp);
+        break;
+    case 0x0112:
+        fread(&fibRgCswNew->rgCswNewData, sizeof(FibRgCswNewData2007), 1, fp);
+        break;
+    default:
+        fprintf(stderr, "Invalid FibRgCswNew.nFibNew\n");
+        exit(EXIT_FAILURE);
+    }
 }
 
-void read_fib(Fib *restrict buffer, FILE *restrict fp)
+void read_fib(Fib *restrict fib, FILE *restrict fp)
 {
     fread(&fib->base, sizeof(FibBase), 1, fp);
     fread(&fib->csw, 2, 1, fp);
