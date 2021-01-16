@@ -19,7 +19,7 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 find_program(CLANG_TIDY_FOUND NAMES clang-tidy)
 if (CLANG_TIDY_FOUND)
-  set(CMAKE_C_CLANG_TIDY clang-tidy --header-filter=.*)
+  set(CMAKE_C_CLANG_TIDY clang-tidy)
 endif()
 
 # vim YouCompleteMe
