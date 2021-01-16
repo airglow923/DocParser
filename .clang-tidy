@@ -1,5 +1,5 @@
 ---
-Checks: 'clang-diagnostic-*,clang-analyzer-*,readability-*,modernize-*,bugprone-*,misc-*,google-runtime-int,llvm-header-guard,readability-magic-numbers'
+Checks: 'clang-diagnostic-*,clang-analyzer-*,readability-*,modernize-*,bugprone-*,misc-*,google-runtime-int,llvm-header-guard,readability-magic-numbers,-readability-magic-numbers,-readability-braces-around-statements,-clang-analyzer-core.CallAndMessage'
 WarningsAsErrors:   '*'
 HeaderFilterRegex:  '.*'
 FormatStyle:        'file'
@@ -10,8 +10,8 @@ CheckOptions:
     value:          CamelCase
   - key:            readability-identifier-naming.EnumConstantPrefix
     value:          k
-  - key:            readability-identifier-naming.FunctionCase
-    value:          CamelCase
+  # - key:            readability-identifier-naming.FunctionCase
+  #   value:          CamelCase
   - key:            readability-identifier-naming.GlobalConstantCase
     value:          CamelCase
   - key:            readability-identifier-naming.GlobalConstantPrefix
@@ -24,14 +24,14 @@ CheckOptions:
     value:          UPPER_CASE
   - key:            readability-identifier-naming.MacroDefinitionIgnoreRegexp
     value:          '*_EXPORTS'
-  - key:            readability-identifier-naming.ParameterCase
-    value:          lower_case
+  # - key:            readability-identifier-naming.ParameterCase
+  #   value:          lower_case
   - key:            readability-identifier-naming.TypeAliasCase
     value:          CamelCase
   - key:            readability-identifier-naming.TypedefCase
     value:          CamelCase
-  - key:            readability-identifier-naming.VariableCase
-    value:          lower_case
+  # - key:            readability-identifier-naming.VariableCase
+  #   value:          lower_case
   - key:            readability-identifier-naming.IgnoreMainLikeFunctions
     value:          1
 ---
