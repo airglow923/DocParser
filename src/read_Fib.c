@@ -32,6 +32,7 @@ void read_Fib(Fib *restrict fib, FILE *restrict fp)
 
     size_t sizeof_FibRgFcLcb;
 
+    // NOLINTNEXTLINE(bugprone-narrowing-conversions)
     switch (fib->base.nFib) {
     case 0x00C1:
         fib->cbRgFcLcb = 0x005D;

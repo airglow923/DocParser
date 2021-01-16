@@ -7,6 +7,6 @@
 
 #include <stdio.h>
 
-void read_Fib(Fib* restrict buffer, FILE* restrict fp);
+void read_Fib(Fib* restrict fib, FILE* restrict fp);
 
 #endif
