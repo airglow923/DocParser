@@ -17,19 +17,9 @@ project(docparser
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
 
-EXECUTE_PROCESS(
-    COMMAND ${CMAKE_C_COMPILER} --version
-    OUTPUT_VARIABLE clang_full_version_string)
-
-string (REGEX REPLACE ".*clang version ([0-9]+\\.[0-9]+).*" "\\1"
-    CLANG_VERSION_STRING ${clang_full_version_string})
-
-# if Clang is 10 and above and clang-tidy is found, run clang-tidy
-if (CLANG_VERSION_STRING GREATER_EQUAL 10)
-  find_program(CLANG_TIDY_FOUND NAMES clang-tidy)
-  if (CLANG_TIDY_FOUND)
-    set(CMAKE_C_CLANG_TIDY clang-tidy --header-filter=.*)
-  endif()
+find_program(CLANG_TIDY_FOUND NAMES clang-tidy)
+if (CLANG_TIDY_FOUND)
+  set(CMAKE_C_CLANG_TIDY clang-tidy --header-filter=.*)
 endif()
 
 # vim YouCompleteMe
