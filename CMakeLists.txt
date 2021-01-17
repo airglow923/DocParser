@@ -11,7 +11,7 @@ string(CONCAT PRJ_VER
 
 project(docparser
     VERSION ${PRJ_VER}
-    DESCRIPTION "Different kinds of allocators implemented in C++"
+    DESCRIPTION "Doc parser"
     LANGUAGES C) 
 
 set(CMAKE_C_STANDARD 99)
@@ -73,7 +73,8 @@ set(SOURCE_FILES
 
 add_library(${PROJECT_NAME} SHARED)
 
-target_compile_options(${PROJECT_NAME} PRIVATE ${PROJECT_COMPILE_FLAGS})
+target_compile_options(${PROJECT_NAME}
+    PRIVATE $<$<COMPILE_LANGUAGE:C>:${PROJECT_COMPILE_FLAGS}>)
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC
@@ -97,3 +98,6 @@ install(TARGETS ${PROJECT_NAME}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+
+enable_testing()
+add_subdirectory(test)
