@@ -1,7 +1,7 @@
-#ifndef HYUNDEOK_DOCPARSER_STRUCTS_FIB_FIBRGCSWNEW_FIBRGCSWNEW_H
-#define HYUNDEOK_DOCPARSER_STRUCTS_FIB_FIBRGCSWNEW_FIBRGCSWNEW_H
+#ifndef HYUNDEOK_DOCPARSER_MSDOC_FIB_FIBRGCSWNEW_FIBRGCSWNEW_H
+#define HYUNDEOK_DOCPARSER_MSDOC_FIB_FIBRGCSWNEW_FIBRGCSWNEW_H
 
-#include "hyundeok/docparser/structs/Fib/FibRgCswNew/FibRgCswNewData.h"
+#include "hyundeok/docparser/msdoc/Fib/FibRgCswNew/FibRgCswNewData.h"
 
 #include <stdint.h>
 

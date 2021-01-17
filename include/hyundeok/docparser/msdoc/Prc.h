@@ -1,7 +1,7 @@
-#ifndef HYUNDEOK_DOCPARSER_STRUCTS_PRC_H
-#define HYUNDEOK_DOCPARSER_STRUCTS_PRC_H
+#ifndef HYUNDEOK_DOCPARSER_MSDOC_PRC_H
+#define HYUNDEOK_DOCPARSER_MSDOC_PRC_H
 
-#include "hyundeok/docparser/structs/PrcData.h"
+#include "hyundeok/docparser/msdoc/PrcData.h"
 
 #include <stdint.h>
 

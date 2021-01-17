@@ -1,8 +1,8 @@
-#ifndef HYUNDEOK_DOCPARSER_STRUCTS_PRL_H
-#define HYUNDEOK_DOCPARSER_STRUCTS_PRL_H
+#ifndef HYUNDEOK_DOCPARSER_MSDOC_PRL_H
+#define HYUNDEOK_DOCPARSER_MSDOC_PRL_H
 
-#include "hyundeok/docparser/structs/Sprm.h"
-#include "hyundeok/docparser/structs/ToggleOperand.h"
+#include "hyundeok/docparser/msdoc/Sprm.h"
+#include "hyundeok/docparser/msdoc/ToggleOperand.h"
 
 #include <stdint.h>
 

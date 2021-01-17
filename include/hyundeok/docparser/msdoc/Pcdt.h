@@ -1,7 +1,7 @@
-#ifndef HYUNDEOK_DOCPARSER_STRUCTS_PCDT_H
-#define HYUNDEOK_DOCPARSER_STRUCTS_PCDT_H
+#ifndef HYUNDEOK_DOCPARSER_MSDOC_PCDT_H
+#define HYUNDEOK_DOCPARSER_MSDOC_PCDT_H
 
-#include "hyundeok/docparser/structs/PlcPcd.h"
+#include "hyundeok/docparser/msdoc/PlcPcd.h"
 
 #include <stdint.h>
 

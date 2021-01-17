@@ -41,30 +41,30 @@ set(PROJECT_COMPILE_FLAGS
 set(INCLUDE_FILES
     include/hyundeok/docparser/read_Fib.h
     include/hyundeok/docparser/utils/file.h
-    include/hyundeok/docparser/structs/Pcd.h
-    include/hyundeok/docparser/structs/Pcdt.h
-    include/hyundeok/docparser/structs/PlcPcd.h
-    include/hyundeok/docparser/structs/Prc.h
-    include/hyundeok/docparser/structs/PrcData.h
-    include/hyundeok/docparser/structs/Prl.h
-    include/hyundeok/docparser/structs/Prm.h
-    include/hyundeok/docparser/structs/STTB.h
-    include/hyundeok/docparser/structs/Sprm.h
-    include/hyundeok/docparser/structs/ToggleOperand.h
-    include/hyundeok/docparser/structs/Fib/Fib.h
-    include/hyundeok/docparser/structs/Fib/FibBase.h
-    include/hyundeok/docparser/structs/Fib/FibRgLw97.h
-    include/hyundeok/docparser/structs/Fib/FibRgW97.h
-    include/hyundeok/docparser/structs/Fib/FibRgCswNew/FibRgCswNew.h
-    include/hyundeok/docparser/structs/Fib/FibRgCswNew/FibRgCswNewData.h
-    include/hyundeok/docparser/structs/Fib/FibRgCswNew/FibRgCswNewData2000.h
-    include/hyundeok/docparser/structs/Fib/FibRgCswNew/FibRgCswNewData2007.h
-    include/hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb.h
-    include/hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb97.h
-    include/hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb2000.h
-    include/hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb2002.h
-    include/hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb2003.h
-    include/hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb2007.h)
+    include/hyundeok/docparser/msdoc/Pcd.h
+    include/hyundeok/docparser/msdoc/Pcdt.h
+    include/hyundeok/docparser/msdoc/PlcPcd.h
+    include/hyundeok/docparser/msdoc/Prc.h
+    include/hyundeok/docparser/msdoc/PrcData.h
+    include/hyundeok/docparser/msdoc/Prl.h
+    include/hyundeok/docparser/msdoc/Prm.h
+    include/hyundeok/docparser/msdoc/STTB.h
+    include/hyundeok/docparser/msdoc/Sprm.h
+    include/hyundeok/docparser/msdoc/ToggleOperand.h
+    include/hyundeok/docparser/msdoc/Fib/Fib.h
+    include/hyundeok/docparser/msdoc/Fib/FibBase.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgLw97.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgW97.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgCswNew/FibRgCswNew.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgCswNew/FibRgCswNewData.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgCswNew/FibRgCswNewData2000.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgCswNew/FibRgCswNewData2007.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb97.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2000.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2002.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2003.h
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2007.h)
 
 set(SOURCE_FILES
     src/read_Fib.c

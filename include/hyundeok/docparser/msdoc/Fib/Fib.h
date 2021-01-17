@@ -1,11 +1,11 @@
-#ifndef HYUNDEOK_DOCPARSER_STRUCTS_FIB_FIB_H
-#define HYUNDEOK_DOCPARSER_STRUCTS_FIB_FIB_H
+#ifndef HYUNDEOK_DOCPARSER_MSDOC_FIB_FIB_H
+#define HYUNDEOK_DOCPARSER_MSDOC_FIB_FIB_H
 
-#include "hyundeok/docparser/structs/Fib/FibBase.h"
-#include "hyundeok/docparser/structs/Fib/FibRgW97.h"
-#include "hyundeok/docparser/structs/Fib/FibRgLw97.h"
-#include "hyundeok/docparser/structs/Fib/FibRgFcLcb/FibRgFcLcb.h"
-#include "hyundeok/docparser/structs/Fib/FibRgCswNew/FibRgCswNew.h"
+#include "hyundeok/docparser/msdoc/Fib/FibBase.h"
+#include "hyundeok/docparser/msdoc/Fib/FibRgW97.h"
+#include "hyundeok/docparser/msdoc/Fib/FibRgLw97.h"
+#include "hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb.h"
+#include "hyundeok/docparser/msdoc/Fib/FibRgCswNew/FibRgCswNew.h"
 
 #include <stdint.h>
 

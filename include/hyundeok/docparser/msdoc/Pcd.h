@@ -1,8 +1,8 @@
-#ifndef HYUNDEOK_DOCPARSER_STRUCTS_PCD_H
-#define HYUNDEOK_DOCPARSER_STRUCTS_PCD_H
+#ifndef HYUNDEOK_DOCPARSER_MSDOC_PCD_H
+#define HYUNDEOK_DOCPARSER_MSDOC_PCD_H
 
-#include "hyundeok/docparser/structs/FcCompressed.h"
-#include "hyundeok/docparser/structs/Prm.h"
+#include "hyundeok/docparser/msdoc/FcCompressed.h"
+#include "hyundeok/docparser/msdoc/Prm.h"
 
 #ifdef __cplusplus
 extern "C" {
