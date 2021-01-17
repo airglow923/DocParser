@@ -34,7 +34,6 @@ endif()
 set(PROJECT_COMPILE_FLAGS
 		-Wall
 		-Wextra
-		-Werror
 		-Wcast-align
 		-Wcast-qual
 		-Wdiv-by-zero)
