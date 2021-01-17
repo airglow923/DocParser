@@ -1,11 +1,13 @@
-#include "read_Fib.h"
+#include "hyundeok/docparser/read_Fib.h"
+
+#include <stdlib.h>
 
 static void read_FibRgCswNew(
     FibRgCswNew *restrict fibRgCswNew, FILE *restrict fp)
 {
     fread(&fibRgCswNew->nFibNew, 2, 1, fp);
 
-    switch (fibRgCswNew.nFibNew) {
+    switch (fibRgCswNew->nFibNew) {
     case 0x00D9:
     case 0x0101:
     case 0x010C:
@@ -30,6 +32,7 @@ void read_Fib(Fib *restrict fib, FILE *restrict fp)
 
     size_t sizeof_FibRgFcLcb;
 
+    // NOLINTNEXTLINE(bugprone-narrowing-conversions)
     switch (fib->base.nFib) {
     case 0x00C1:
         fib->cbRgFcLcb = 0x005D;
