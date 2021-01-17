@@ -3,6 +3,10 @@
 
 #define SZ_FIBRGW97 28
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibRgW97 {
   unsigned int reserved1 : 16;
   unsigned int reserved2 : 16;
@@ -19,5 +23,9 @@ typedef struct FibRgW97 {
   unsigned int reserved13 : 16;
   unsigned int lidFE : 16;
 } FibRgW97;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

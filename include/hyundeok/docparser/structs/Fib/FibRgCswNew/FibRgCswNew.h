@@ -5,6 +5,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibRgCswNew {
   uint16_t nFibNew;
   union {
@@ -12,5 +16,9 @@ typedef struct FibRgCswNew {
     FibRgCswNewData2007 frcnd2007;
   } rgCswNewData;
 } FibRgCswNew;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

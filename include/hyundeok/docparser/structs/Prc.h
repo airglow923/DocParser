@@ -5,9 +5,17 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Prc {
   uint8_t clxt;
   PrcData data;
 } Prc;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

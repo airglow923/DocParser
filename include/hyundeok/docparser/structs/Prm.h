@@ -1,6 +1,10 @@
 #ifndef HYUNDEOK_DOCPARSER_STRUCTS_PRM_H
 #define HYUNDEOK_DOCPARSER_STRUCTS_PRM_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Prm {
   unsigned int fComplex : 1;
   union {
@@ -13,5 +17,9 @@ typedef struct Prm {
     } Prm1;
   } data;
 } Prm;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -4,6 +4,10 @@
 #include "hyundeok/docparser/structs/FcCompressed.h"
 #include "hyundeok/docparser/structs/Prm.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Pcd {
   struct {
     unsigned int fNoParaLast : 1;
@@ -14,5 +18,9 @@ typedef struct Pcd {
   FcCompressed fc;
   Prm prm;
 } Pcd;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

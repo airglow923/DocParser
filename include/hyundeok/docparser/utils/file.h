@@ -11,6 +11,10 @@
 #include <handleapi.h>
 #include <inttypes.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef UNICODE
 typedef wchar_t WINCHAR
 #else
@@ -40,6 +44,10 @@ LONGLONG get_file_size(const WINCHAR* filename);
 
 off_t get_file_size(const char* filename);
 
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

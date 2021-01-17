@@ -5,9 +5,17 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct PlcPcd {
   uint32_t* aCP;
   Pcd* aPcd;
 } PlcPcd;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

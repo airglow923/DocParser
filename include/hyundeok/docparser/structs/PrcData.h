@@ -5,9 +5,17 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct PrcData {
   int16_t cbGrpprl;
   Prl* GrpPrl;
 } PrcData;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

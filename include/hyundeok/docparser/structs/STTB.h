@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct STTB {
   unsigned int fExtend : 16;
   union {
@@ -22,5 +26,9 @@ typedef struct STTB {
     uint8_t* extraData;
   } * sttb_array;
 } STTB;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

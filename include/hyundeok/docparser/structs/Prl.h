@@ -6,6 +6,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Prl {
   Sprm sprm;
   union {
@@ -24,5 +28,9 @@ typedef struct Prl {
     } seven;
   } operand;
 } Prl;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

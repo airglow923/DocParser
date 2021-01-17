@@ -3,8 +3,16 @@
 
 #define SZ_FIBRGCSWNEWDATA2000 2
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibRgCswNewData2000 {
   unsigned int cQuickSavesNew : 16;
 } FibRgCswNewData2000;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

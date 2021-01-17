@@ -9,6 +9,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Fib {
   FibBase base;
   uint16_t csw;
@@ -26,5 +30,9 @@ typedef struct Fib {
   uint16_t cswNew;
   FibRgCswNew fibRgCswNew;
 } Fib;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

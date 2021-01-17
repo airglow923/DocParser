@@ -7,6 +7,14 @@
 
 #include <stdio.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void read_Fib(Fib* restrict fib, FILE* restrict fp);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

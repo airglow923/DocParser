@@ -3,6 +3,10 @@
 
 #define SZ_FIBRGFCLCB97 744
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibRgFcLcb97 {
   unsigned int fcStshfOrig : 32;
   unsigned int lcbStshfOrig : 32;
@@ -191,5 +195,9 @@ typedef struct FibRgFcLcb97 {
   unsigned int fcSttbfUssr : 32;
   unsigned int lcbSttbfUssr : 32;
 } FibRgFcLcb97;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

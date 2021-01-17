@@ -5,6 +5,10 @@
 
 #define SZ_FIBRGFCLCB2007 1464
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibRgFcLcb2007 {
   FibRgFcLcb2003 rgFcLcb2003;
   unsigned int fcPlcfmthd : 32;
@@ -46,5 +50,9 @@ typedef struct FibRgFcLcb2007 {
   unsigned int fcColorSchemeMapping : 32;
   unsigned int lcbColorSchemeMapping : 32;
 } FibRgFcLcb2007;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

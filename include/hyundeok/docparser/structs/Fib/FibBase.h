@@ -3,6 +3,10 @@
 
 #define SZ_FIBBASE 32
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibBase {
   unsigned int wident : 16;
   unsigned int nFib : 16;
@@ -36,5 +40,9 @@ typedef struct FibBase {
   unsigned int reserved5 : 32;
   unsigned int reserved6 : 32;
 } FibBase;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

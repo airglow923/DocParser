@@ -5,6 +5,10 @@
 
 #define SZ_FIBRGFCLCB2000 864
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct FibRgFcLcb2000 {
   FibRgFcLcb97 rgFcLcb97;
   unsigned int fcPlcfTch : 32;
@@ -38,5 +42,9 @@ typedef struct FibRgFcLcb2000 {
   unsigned int fcBkdEdnOld : 32;
   unsigned int lcbBkdEdnOld : 32;
 } FibRgFcLcb2000;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
