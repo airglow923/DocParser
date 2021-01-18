@@ -21,6 +21,10 @@ typedef wchar_t WINCHAR
 typedef char WINCHAR
 #endif
 
+#ifdef __cplusplus
+}
+#endif
+
 #elif defined(unix) || defined(__unix) || defined(__unix__) ||                 \
     defined(__linux__)
 
@@ -29,10 +33,13 @@ typedef char WINCHAR
 
 #endif
 
-    /* function declaration */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-    int
-    is_big_endian(void);
+/* function declaration */
+
+int is_big_endian(void);
 int is_little_endian(void);
 
 #if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)
