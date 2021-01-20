@@ -11,16 +11,6 @@
 #include <handleapi.h>
 #include <inttypes.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#ifdef UNICODE
-typedef wchar_t WINCHAR
-#else
-typedef char WINCHAR
-#endif
-
 #elif defined(unix) || defined(__unix) || defined(__unix__) ||                 \
     defined(__linux__)
 
@@ -29,10 +19,21 @@ typedef char WINCHAR
 
 #endif
 
-    /* function declaration */
+#include <stdio.h>
 
-    int
-    is_big_endian(void);
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef UNICODE
+typedef wchar_t WINCHAR;
+#else
+typedef char WINCHAR;
+#endif
+
+/* function declaration */
+
+int is_big_endian(void);
 int is_little_endian(void);
 
 #if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)

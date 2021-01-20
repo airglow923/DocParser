@@ -1,6 +1,8 @@
 #ifndef HYUNDEOK_DOCPARSER_MSDOC_FIB_FIBBASE_H
 #define HYUNDEOK_DOCPARSER_MSDOC_FIB_FIBBASE_H
 
+#include "hyundeok/docparser/msdoc/LID.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -9,7 +11,7 @@ typedef struct FibBase {
   unsigned int wident : 16;
   unsigned int nFib : 16;
   unsigned int unused : 16;
-  unsigned int lid : 16;
+  LID lid;
   unsigned int pnNext : 16;
   unsigned int fDot : 1;
   unsigned int fGlay : 1;
