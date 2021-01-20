@@ -19,8 +19,6 @@
 
 #endif
 
-#include <stdio.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -31,16 +29,10 @@ typedef wchar_t WINCHAR;
 typedef char WINCHAR;
 #endif
 
-typedef struct HyundeokHeap {
-  void* data;
-  size_t size;
-} HyundeokHeap;
-
 /* function declaration */
 
 int is_big_endian(void);
 int is_little_endian(void);
-HyundeokHeap* copy_struct_from_file(FILE* fp, size_t size);
 
 #if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)
 
