@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-HyundeokHeap* copy_struct_from_file(FILE* fp, size_t size) {
+HyundeokHeap* create_file(FILE* fp, size_t size) {
   HyundeokHeap* heap = malloc(sizeof(HyundeokHeap));
   HYUNDEOK_MEMORY_ASSERT(heap,);
 
@@ -24,5 +24,12 @@ HyundeokHeap* copy_struct_from_file(FILE* fp, size_t size) {
   HYUNDEOK_ASSERT(res, 1, NULL, free(heap->data); free(heap));
 
   return heap;
+}
+
+void destroy_heap(HyundeokHeap* heap) {
+  free(heap->data);
+  heap->data = NULL;
+  heap->size = 0;
+  free(heap);
 }
 

@@ -8,6 +8,7 @@ typedef struct HyundeokHeap {
   size_t size;
 } HyundeokHeap;
 
-HyundeokHeap* copy_struct_from_file(FILE* fp, size_t size);
+HyundeokHeap* create_heap(FILE* fp, size_t size);
+void destroy_heap(HyundeokHeap* heap);
 
 #endif
