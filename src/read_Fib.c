@@ -48,13 +48,13 @@ int read_Fib(Fib* restrict fib, FILE* restrict fp) {
   fread(&fib->csw, sizeof(fib->csw), 1, fp);
   HYUNDEOK_NUMERIC_ASSERT(fib->csw, 0x000E);
 
-  // read minimum of Fib.csw * 2 bytes
+  // TODO: read minimum of Fib.csw * 2 bytes
   fread(&fib->fibRgW, sizeof(FibRgW97), 1, fp);
 
   fread(&fib->cslw, sizeof(fib->cslw), 1, fp);
   HYUNDEOK_NUMERIC_ASSERT(fib->cslw, 0x0016);
 
-  // read minimum of Fib.cslw * 4 bytes
+  // TODO: read minimum of Fib.cslw * 4 bytes
   fread(&fib->fibRgLw, sizeof(FibRgLw97), 1, fp);
 
   size_t sizeof_FibRgFcLcb;
@@ -88,12 +88,12 @@ int read_Fib(Fib* restrict fib, FILE* restrict fp) {
     break;
   }
 
-  // read minimum of Fib.cbRgFcLcb * 8 bytes
+  // TODO: read minimum of Fib.cbRgFcLcb * 8 bytes
   fread(&fib->fibRgFcLcbBlob, sizeof_FibRgFcLcb, 1, fp);
   // NOLINTNEXTLINE(bugprone-narrowing-conversions)
   fseek(fp, sizeof(fib->fibRgFcLcbBlob) - sizeof_FibRgFcLcb, SEEK_CUR);
 
-  // read minimum of Fib.cbRgFcLcb * 8 bytes
+  // TODO: read minimum of Fib.cbRgFcLcb * 8 bytes
   HYUNDEOK_NUMERIC_ASSERT(read_FibRgCswNew(&fib->fibRgCswNew, fp), 0);
 
   return 0;
