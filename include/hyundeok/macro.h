@@ -19,14 +19,26 @@
 #undef HYUNDEOK_PRTN_ERR
 #define HYUNDEOK_PRTN_ERR(format, ...) fprintf(stderr, format, ##__VA_ARGS__)
 
-#undef HYUNDEOK_NUMERIC_ASSERT
-#define HYUNDEOK_NUMERIC_ASSERT(value, target)                                 \
+#undef HYUNDEOK_ASSERT_FORMAT
+#define HYUNDEOK_ASSERT_FORMAT(value, target, ret, callback, format, ...)      \
   do {                                                                         \
     if ((value) != (target)) {                                                 \
-      HYUNDEOK_PRTN_ERR(HYUNDEOK_LOG(HYUNDEOK_STRINGIFY(                       \
-          value) " is not equal to " HYUNDEOK_STRINGIFY(target)));             \
-      return -1;                                                               \
+      callback;                                                                \
+      HYUNDEOK_PRTN_ERR(HYUNDEOK_LOG(format, ##__VA_ARGS__));                  \
+      return ret;                                                              \
     }                                                                          \
   } while (0)
+
+#undef HYUNDEOK_ASSERT
+#define HYUNDEOK_ASSERT(value, target, ret, callback)                          \
+  HYUNDEOK_ASSERT_FORMAT(value, target, ret, callback,                         \
+                         "%s is not equal to %s\n", HYUNDEOK_STRINGIFY(value), \
+                         HYUNDEOK_STRINGIFY(target))
+
+#undef HYUNDEOK_MEMORY_ASSERT
+#define HYUNDEOK_MEMORY_ASSERT(memory, callback)                               \
+  HYUNDEOK_ASSERT_FORMAT(!!(memory), !NULL, NULL, callback,                    \
+                         "Failed to allocate %s\n",                            \
+                         HYUNDEOK_STRINGIFY(memory))
 
 #endif

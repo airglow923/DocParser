@@ -7,14 +7,14 @@
 int read_FibBase(FibBase* restrict fibBase, FILE* restrict fp) {
   fread(fibBase, sizeof(FibBase), 1, fp);
 
-  HYUNDEOK_NUMERIC_ASSERT(fibBase->wident, 0xA5EC);
+  HYUNDEOK_ASSERT(fibBase->wident, 0xA5EC, -1,);
 
   // TODO: handle lid
   // TODO: handle pnNext
 
-  HYUNDEOK_NUMERIC_ASSERT(fibBase->envr, 0);
-  HYUNDEOK_NUMERIC_ASSERT(fibBase->fMac, 0);
-  HYUNDEOK_NUMERIC_ASSERT(fibBase->fEmptySpecial, 0);
+  HYUNDEOK_ASSERT(fibBase->envr, 0, -1,);
+  HYUNDEOK_ASSERT(fibBase->fMac, 0, -1,);
+  HYUNDEOK_ASSERT(fibBase->fEmptySpecial, 0, -1,);
 
   return 0;
 }
@@ -43,18 +43,18 @@ int read_Fib(Fib* restrict fib, FILE* restrict fp) {
   // set fib to 0
   memset(fib, 0, sizeof(Fib));
 
-  HYUNDEOK_NUMERIC_ASSERT(read_FibBase(&fib->base, fp), 0);
+  HYUNDEOK_ASSERT(read_FibBase(&fib->base, fp), 0, -1,);
 
   fread(&fib->csw, sizeof(fib->csw), 1, fp);
-  HYUNDEOK_NUMERIC_ASSERT(fib->csw, 0x000E);
+  HYUNDEOK_ASSERT(fib->csw, 0x000E, -1,);
 
-  // read minimum of Fib.csw * 2 bytes
+  // TODO: read minimum of Fib.csw * 2 bytes
   fread(&fib->fibRgW, sizeof(FibRgW97), 1, fp);
 
   fread(&fib->cslw, sizeof(fib->cslw), 1, fp);
-  HYUNDEOK_NUMERIC_ASSERT(fib->cslw, 0x0016);
+  HYUNDEOK_ASSERT(fib->cslw, 0x0016, -1,);
 
-  // read minimum of Fib.cslw * 4 bytes
+  // TODO: read minimum of Fib.cslw * 4 bytes
   fread(&fib->fibRgLw, sizeof(FibRgLw97), 1, fp);
 
   size_t sizeof_FibRgFcLcb;
@@ -88,13 +88,13 @@ int read_Fib(Fib* restrict fib, FILE* restrict fp) {
     break;
   }
 
-  // read minimum of Fib.cbRgFcLcb * 8 bytes
+  // TODO: read minimum of Fib.cbRgFcLcb * 8 bytes
   fread(&fib->fibRgFcLcbBlob, sizeof_FibRgFcLcb, 1, fp);
   // NOLINTNEXTLINE(bugprone-narrowing-conversions)
   fseek(fp, sizeof(fib->fibRgFcLcbBlob) - sizeof_FibRgFcLcb, SEEK_CUR);
 
-  // read minimum of Fib.cbRgFcLcb * 8 bytes
-  HYUNDEOK_NUMERIC_ASSERT(read_FibRgCswNew(&fib->fibRgCswNew, fp), 0);
+  // TODO: read minimum of Fib.cbRgFcLcb * 8 bytes
+  HYUNDEOK_ASSERT(read_FibRgCswNew(&fib->fibRgCswNew, fp), 0, -1,);
 
   return 0;
 }
