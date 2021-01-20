@@ -64,33 +64,26 @@ int read_Fib(Fib* restrict dest, HyundeokHeap* restrict src) {
   // TODO: read minimum of Fib.cslw * 4 bytes
   dest->fibRgLw = copy->fibRgLw;
 
-  size_t sizeof_FibRgFcLcb;
-
   // NOLINTNEXTLINE(bugprone-narrowing-conversions)
   switch (copy->base.nFib) {
   case 0x00C1:
     dest->cbRgFcLcb = 0x005D;
-    sizeof_FibRgFcLcb = sizeof(FibRgFcLcb97);
     dest->cswNew = 0;
     break;
   case 0x00D9:
     dest->cbRgFcLcb = 0x006C;
-    sizeof_FibRgFcLcb = sizeof(FibRgFcLcb2000);
     dest->cswNew = 0x0002;
     break;
   case 0x0101:
     dest->cbRgFcLcb = 0x0088;
-    sizeof_FibRgFcLcb = sizeof(FibRgFcLcb2002);
     dest->cswNew = 0x0002;
     break;
   case 0x010C:
     dest->cbRgFcLcb = 0x00A4;
-    sizeof_FibRgFcLcb = sizeof(FibRgFcLcb2003);
     dest->cswNew = 0x0002;
     break;
   case 0x0112:
     dest->cbRgFcLcb = 0x00B7;
-    sizeof_FibRgFcLcb = sizeof(FibRgFcLcb2007);
     dest->cswNew = 0x0005;
     break;
   }
