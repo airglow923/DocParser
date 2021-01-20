@@ -40,6 +40,7 @@ set(PROJECT_COMPILE_FLAGS
 
 set(INCLUDE_FILES
     include/hyundeok/macro.h
+    include/hyundeok/HyundeokHeap.h
     include/hyundeok/docparser/read_Fib.h
     include/hyundeok/docparser/utils/file.h
     include/hyundeok/docparser/msdoc/Clx.h
@@ -72,8 +73,9 @@ set(INCLUDE_FILES
     include/hyundeok/docparser/msoffcrypto/EncryptionHeader.h)
 
 set(SOURCE_FILES
-    src/read_Fib.c
-    src/utils/file.c)
+    src/HyundeokHeap.c
+    src/docparser/read_Fib.c
+    src/docparser/utils/file.c)
 
 add_library(${PROJECT_NAME} SHARED)
 
