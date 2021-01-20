@@ -39,8 +39,12 @@ set(PROJECT_COMPILE_FLAGS
 		-Wdiv-by-zero)
 
 set(INCLUDE_FILES
+    include/hyundeok/macro.h
     include/hyundeok/docparser/read_Fib.h
     include/hyundeok/docparser/utils/file.h
+    include/hyundeok/docparser/msdoc/Clx.h
+    include/hyundeok/docparser/msdoc/FcCompressed.h
+    include/hyundeok/docparser/msdoc/LID.h
     include/hyundeok/docparser/msdoc/Pcd.h
     include/hyundeok/docparser/msdoc/Pcdt.h
     include/hyundeok/docparser/msdoc/PlcPcd.h
@@ -64,7 +68,8 @@ set(INCLUDE_FILES
     include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2000.h
     include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2002.h
     include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2003.h
-    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2007.h)
+    include/hyundeok/docparser/msdoc/Fib/FibRgFcLcb/FibRgFcLcb2007.h
+    include/hyundeok/docparser/msoffcrypto/EncryptionHeader.h)
 
 set(SOURCE_FILES
     src/read_Fib.c
