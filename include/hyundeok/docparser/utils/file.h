@@ -11,20 +11,6 @@
 #include <handleapi.h>
 #include <inttypes.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#ifdef UNICODE
-typedef wchar_t WINCHAR
-#else
-typedef char WINCHAR
-#endif
-
-#ifdef __cplusplus
-}
-#endif
-
 #elif defined(unix) || defined(__unix) || defined(__unix__) ||                 \
     defined(__linux__)
 
@@ -33,8 +19,16 @@ typedef char WINCHAR
 
 #endif
 
+#include <stdio.h>
+
 #ifdef __cplusplus
 extern "C" {
+#endif
+
+#ifdef UNICODE
+typedef wchar_t WINCHAR
+#else
+typedef char WINCHAR
 #endif
 
 /* function declaration */
