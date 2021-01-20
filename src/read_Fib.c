@@ -43,7 +43,7 @@ int read_Fib(Fib* restrict fib, FILE* restrict fp) {
   // set fib to 0
   memset(fib, 0, sizeof(Fib));
 
-  HYUNDEOK_NUMERIC_ASSERT(read_FibBase(fib->base, fp), 0);
+  HYUNDEOK_NUMERIC_ASSERT(read_FibBase(&fib->base, fp), 0);
 
   fread(&fib->csw, sizeof(fib->csw), 1, fp);
   HYUNDEOK_NUMERIC_ASSERT(fib->csw, 0x000E);
@@ -90,7 +90,8 @@ int read_Fib(Fib* restrict fib, FILE* restrict fp) {
 
   // read minimum of Fib.cbRgFcLcb * 8 bytes
   fread(&fib->fibRgFcLcbBlob, sizeof_FibRgFcLcb, 1, fp);
-  fseek(fp, sizeof(fib->fibRgFcLcbBlob - sizeof_FibRgFcLcb), SEEK_CUR);
+  // NOLINTNEXTLINE(bugprone-narrowing-conversions)
+  fseek(fp, sizeof(fib->fibRgFcLcbBlob) - sizeof_FibRgFcLcb, SEEK_CUR);
 
   // read minimum of Fib.cbRgFcLcb * 8 bytes
   HYUNDEOK_NUMERIC_ASSERT(read_FibRgCswNew(&fib->fibRgCswNew, fp), 0);

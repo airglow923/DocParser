@@ -26,9 +26,9 @@ extern "C" {
 #endif
 
 #ifdef UNICODE
-typedef wchar_t WINCHAR
+typedef wchar_t WINCHAR;
 #else
-typedef char WINCHAR
+typedef char WINCHAR;
 #endif
 
 /* function declaration */

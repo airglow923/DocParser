@@ -1,7 +1,7 @@
 #ifndef HYUNDEOK_MACRO_H
 #define HYUNDEOK_MACRO_H
 
-#include <stdio.h>  // fprintf
+#include <stdio.h> // fprintf
 
 #undef HYUNDEOK_STRINGIFY_IMPL
 #define HYUNDEOK_STRINGIFY_IMPL(x) #x
@@ -22,7 +22,7 @@
 #undef HYUNDEOK_NUMERIC_ASSERT
 #define HYUNDEOK_NUMERIC_ASSERT(value, target)                                 \
   do {                                                                         \
-    if (value != target) {                                                     \
+    if ((value) != (target)) {                                                 \
       HYUNDEOK_PRTN_ERR(HYUNDEOK_LOG(HYUNDEOK_STRINGIFY(                       \
           value) " is not equal to " HYUNDEOK_STRINGIFY(target)));             \
       return -1;                                                               \
