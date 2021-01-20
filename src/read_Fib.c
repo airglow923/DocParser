@@ -20,7 +20,7 @@ int read_FibBase(FibBase* restrict fibBase, FILE* restrict fp) {
 }
 
 int read_FibRgCswNew(FibRgCswNew* restrict fibRgCswNew, FILE* restrict fp) {
-  fread(&fibRgCswNew->nFibNew, 2, 1, fp);
+  fread(&fibRgCswNew->nFibNew, sizeof(fibRgCswNew->nFibNew), 1, fp);
 
   switch (fibRgCswNew->nFibNew) {
   case 0x00D9:
